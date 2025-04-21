@@ -1,50 +1,58 @@
-# AugmentOS-Cloud-Example-App
+# Reminders App for AugmentOS
 
-### Install AugmentOS on your phone
+This app provides reminder management functionality for AugmentOS smart glasses.
 
-AugmentOS install links: [AugmentOS.org/install](https://AugmentOS.org/install)
+## Features
 
-### (Easiest way to get started) Set up ngrok
+- Create reminders through Mira AI with due dates
+- View your active and completed reminders
+- Mark reminders as complete or incomplete
+- Delete reminders
 
-1. `brew install ngrok`
+## Development
 
-2. Make an ngrok account
+### Prerequisites
 
-3. [Use ngrok to make a static address/URL](https://dashboard.ngrok.com/)
+- [Bun](https://bun.sh/) for JavaScript/TypeScript runtime
+- AugmentOS Developer Account
 
-### Register your APP with AugmentOS
+### Setup and Development
 
-<img width="181" alt="image" src="https://github.com/user-attachments/assets/36192c2b-e1ba-423b-90de-47ff8cd91318" />
+#### Local Development
 
-1. Navigate to [console.AugmentOS.org](https://console.AugmentOS.org/)
+```bash
+# Install dependencies
+bun install
 
-2. Click "Sign In", and log in with the same account you're using for AugmentOS
-
-3. Click "Create App"
-
-4. Set a unique package name like `com.yourName.yourAppName`
-
-5. For "Public URL", enter your Ngrok's static URL
-
-### Get your APP running!
-
-1. [Install bun](https://bun.sh/docs/installation)
-
-2. Clone this repo: `git clone git@github.com:AugmentOS-Community/AugmentOS-Cloud-Example-App.git`
-
-3. cd into your repo, then type `bun install`
-
-4. Edit your `index.ts` to match the app you registered at [console.AugmentOS.org](https://console.AugmentOS.org/)
-    
-```typescript
-const app = new ExampleAugmentOSApp({
-  packageName: 'com.yourName.yourAppName', // The packageName you specified on console.AugmentOS.org
-  apiKey: 'your_api_key', // Get this from console.AugmentOS.org
-  port: 3000 // The port you're hosting the server on
-});
+# Start development server
+bun run index.ts
 ```
 
-7. Run your app with `bun run index.ts`
+### Environment Variables
 
-8. To expose your app to the internet (and thus AugmentOS) with ngrok, run: `ngrok http --url=<YOUR_NGROK_URL_HERE> 3000`
-    * `3000` is the port. It must match what is in the app config. If you entered `port: 8080`, use `8080` for ngrok instead.
+The app uses the following environment variables:
+
+- `PORT` - Port to run the server on (default: 3000)
+- `PACKAGE_NAME` - App package name (default: "com.augmentos.reminders")
+- `API_KEY` - Your AugmentOS API key
+- `PUBLIC_URL` - Public URL for the app (default: "http://localhost:3000")
+- `CLOUD_HOST_NAME` - AugmentOS cloud host (default: "prod.augmentos.cloud") - Optional, only needed if connecting to a development version of AugmentOS Cloud
+
+### Deployment
+
+To deploy this app to AugmentOS:
+
+1. Register in the AugmentOS Developer Console
+2. Create a new TPA and get your API key
+3. Deploy the app to a publicly accessible URL
+4. Configure your app in the AugmentOS Developer Console
+
+### Tool Calls
+
+The app responds to the following tool calls:
+
+- `add_todo` - Add a new reminder
+- `get_todos` - Get all reminders
+- `mark_todo_complete` - Mark a reminder as complete
+- `mark_todo_incomplete` - Mark a reminder as incomplete
+- `delete_todo` - Delete a reminder

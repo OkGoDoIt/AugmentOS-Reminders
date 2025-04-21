@@ -1,14 +1,14 @@
 {
-  "name": "augmentos-cloud-example-app",
+  "name": "augmentos-reminders",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Roger Pincombe",
   "license": "ISC",
-  "description": "",
+  "description": "AugmentOS Reminders TPA",
   "dependencies": {
-    "@augmentos/sdk": "^1.1.0"
+    "@augmentos/sdk": "^1.1.2"
   }
 }
