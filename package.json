@@ -33,6 +33,6 @@
   "license": "ISC",
   "description": "AugmentOS Reminders TPA",
   "dependencies": {
-    "@augmentos/sdk": "^1.1.2"
+    "@augmentos/sdk": "1.1.4"
   }
 }
