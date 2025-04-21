@@ -15,7 +15,7 @@ function generateWebviewUrl(baseUrl: string, token: string): string {
   return `${baseUrl}?token=${encodeURIComponent(token)}`;
 }
 
-class ExampleAugmentOSApp extends TpaServer {
+class RemindersTPA extends TpaServer {
 
   constructor() {
     super({
@@ -163,6 +163,6 @@ class ExampleAugmentOSApp extends TpaServer {
 // Start the server
 // DEV CONSOLE URL: https://console.AugmentOS.org/
 // Get your webhook URL from ngrok (or whatever public URL you have)
-const app = new ExampleAugmentOSApp();
+const app = new RemindersTPA();
 
 app.start().catch(console.error);
