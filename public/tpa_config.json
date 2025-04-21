@@ -1,6 +1,6 @@
 {
   "name": "Todo Tracker",
-  "description": "Allows you to save and view reminders, including integration with Mira AI.  You can view them on the web at https://todo.okgodoit.com",
+  "description": "Allows you to save and view reminders, including integration with Mira AI.  Just say 'Hey Mira, remind me to ...' and I'll save it for you.  Then say 'Hey Mira, show me my reminders' and I'll show you them.",
   "version": "1.0.0",
   "settings": [],
   "tools": [
