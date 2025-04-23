@@ -1,4 +1,4 @@
-import { ToolCall, TpaServer, TpaSession, AuthenticatedRequest } from '@augmentos/sdk';
+import { ToolCall, TpaServer, TpaSession } from '@augmentos/sdk';
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 const PACKAGE_NAME = process.env.PACKAGE_NAME;
 const API_KEY = process.env.API_KEY;
