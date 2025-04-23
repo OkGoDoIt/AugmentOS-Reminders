@@ -230,6 +230,15 @@ button {
     margin-top: 20px;
 }
 
+.instructions {
+    font-size: 12pt;
+    color: var(--secondary-color);
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+}
+
 /* Mobile optimization */
 @media (max-width: 768px) {
     h1 {
