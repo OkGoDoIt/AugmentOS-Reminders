@@ -3,7 +3,7 @@ import express from 'express';
 import path from 'path';
 import bodyParser from 'body-parser';
 import { addReminder, getUserReminders, markComplete, markIncomplete, deleteReminder } from './reminders';
-import { friendlyDate } from '../utils';
+import { friendlyDate } from './utils';
 
 /**
  * Sets up all Express routes and middleware for the TPA server

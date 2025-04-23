@@ -4,7 +4,7 @@ const PACKAGE_NAME = process.env.PACKAGE_NAME;
 const API_KEY = process.env.API_KEY;
 import path from 'path';
 import { getUserReminders } from './reminders';
-import { friendlyDate } from '../utils';
+import { friendlyDate } from './utils';
 import { setupExpressRoutes } from './webview';
 import { handleToolCall } from './tools';
 
